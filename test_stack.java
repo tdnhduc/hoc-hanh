@@ -10,6 +10,7 @@ public class test_stack {
         stack.push(15);
         stack.push(20);
         stack.push(25);
+
         stack.print_stack();
         System.out.println( " " + stack.get());
 
