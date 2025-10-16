@@ -6,11 +6,11 @@ public class search_node {
         Node root = null;
         root = addNode(root, 3);
         root = addNode(root, 4);
-        root = addNode(root, 5);
-        root = addNode(root, 6);
-        root = addNode(root, 7);
-        root = addNode(root, 8);
-        root = addNode(root, 9);
+//        root = addNode(root, 5);
+//        root = addNode(root, 6);
+//        root = addNode(root, 7);
+//        root = addNode(root, 8);
+//        root = addNode(root, 9);
 
         root = deleteNode(root);
 
@@ -27,7 +27,7 @@ public class search_node {
 //        int halfOfNode = numberOfNode / 2;
 
         String a = "ABCASDASDASD";
-        System.out.println("\nA: " + numberOfAppear(a, "A"));
+        System.out.println("\nB: " + numberOfAppear(a, "B"));
         System.out.println();
 
         String b = "ABCDCBA";
@@ -50,7 +50,7 @@ public class search_node {
             } else {
                 map.put(string.charAt(i), map.get(string.charAt(i)) + 1);
             }
-            // System.out.println("map = " + map);
+            //System.out.println("map = " + map);
         }
 
         // lay so luong ki tu
