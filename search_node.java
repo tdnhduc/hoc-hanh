@@ -11,6 +11,7 @@ public class search_node {
 //        root = addNode(root, 7);
 //        root = addNode(root, 8);
 //        root = addNode(root, 9);
+        // test
 
         root = deleteNode(root);
 
@@ -37,7 +38,7 @@ public class search_node {
         checkSymmetry(c);
         checkSymmetry(d);
     }
-
+    //
     // dem so luong phan tu trong chuoi
     public static int numberOfAppear(String string, String character) {
         // ABCASDASDASD
