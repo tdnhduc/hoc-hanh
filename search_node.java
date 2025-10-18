@@ -1,4 +1,6 @@
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 
 public class search_node {
     public static void main(String[] args) {
@@ -37,8 +39,65 @@ public class search_node {
         checkSymmetry(b);
         checkSymmetry(c);
         checkSymmetry(d);
+
+        List<Integer> e = Arrays.asList(1,2,3,4,5,6,7,8,9);
+        List<Integer> f = Arrays.asList(1,1,2,3,4,5,6,7,8,9);
+        List<Integer> g = Arrays.asList(1,1,2,3,4,4,5,6,7,8,9);
+        List<Integer> h = Arrays.asList(1,2,3,4,4,5,6,7,8,9);
+        int target = 5;
+        twoSum(e, target);
+        System.out.println();
+        twoSum(f, target);
+        System.out.println();
+        twoSum(g, target);
+        System.out.println();
+        twoSum(h, target);
+
     }
-    //
+
+    public static void twoSum(List<Integer> numbers, int target) {
+        // a = [1,2,3,4,5,6,7,8,9];
+        // a = [1,1,2,3,4,4,5,6,7,8,9]
+        // tong no la 5 => (1,4) (1,4), (2,3)
+        // print 1 - 4 ; 4 - 1
+
+        //step 1: for loop duyet phan tu trong list
+        for (int i = 0; i < numbers.size(); i++){
+            // cho a = i la phan tu dau tien
+            int a = numbers.get(i);
+            // dem a co bao nhieu lan xuat hiẹn
+            int counta = 0;
+            for (int k = 0; k < numbers.size(); k++) {
+                if (numbers.get(k) == a) {
+                    counta++;
+                }
+            }
+            // step 2: for loop tu i + 1 den cuoi list
+            for (int j = i + 1; j < numbers.size(); j++){
+                // cho j la phan tu sau i den het list
+                int b = numbers.get(j);
+                // dem so lan b xuat hiẹn
+                int countb = 0;
+                for (int k = 0; k < numbers.size(); k++) {
+                    if (numbers.get(k) == b) {
+                        countb++;
+                    }
+                }
+                // neu a + b = target va lay lan dau tien no xuat hien
+                if (a + b == target && i == numbers.indexOf(a)){
+                    // neu chi cuat hien 1 lan thi in ra
+                    if (counta == 1 || countb == 1) {
+                        System.out.print(a + "-" + b + ";");
+                        break;
+                    }
+                    // cả 2 deu xuat hien nhieu lan thi in ra het
+                    else {
+                        System.out.print(a + "-" + b + ";");
+                    }
+                }
+            }
+        }
+    }
     // dem so luong phan tu trong chuoi
     public static int numberOfAppear(String string, String character) {
         // ABCASDASDASD
@@ -87,6 +146,13 @@ public class search_node {
         } else {
             System.out.println( string + " ko doi xung");
         }
+    }
+
+    public int tinhGiaiThua(int n) {
+        // print n!
+        if (n != 0 && n != 1)
+            return n * tinhGiaiThua(n-1);
+        return 1;
     }
 
     // tim node giua
