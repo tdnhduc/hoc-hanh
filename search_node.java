@@ -63,7 +63,7 @@ public class search_node {
 
         //step 1: for loop duyet phan tu trong list
         for (int i = 0; i < numbers.size(); i++){
-            // cho a = i la phan tu dau tien
+            // cho a = i la phan tu dau tien list
             int a = numbers.get(i);
             // dem a co bao nhieu lan xuat hiẹn
             int counta = 0;
@@ -74,7 +74,7 @@ public class search_node {
             }
             // step 2: for loop tu i + 1 den cuoi list
             for (int j = i + 1; j < numbers.size(); j++){
-                // cho j la phan tu sau i den het list
+                // cho b = j la phan tu sau i den het list
                 int b = numbers.get(j);
                 // dem so lan b xuat hiẹn
                 int countb = 0;
